@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>DSA practice Tracker</title>
+      <link rel="stylesheet" href="style.css">
+      <link href="http://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet>
+   </head>
+ 
+ 
+   <body>
+     
+      <div class ="container">
+
+
+      <h1>DSA Practice Tracker</h1>
+
+      <div class="card">
+
+       <form>
+         <label>
+            Date:
+            <input type="date" id="date">
+         </label>
+
+         <label>
+            Topic:
+            <input type="text" id="topic" placeholder="Recursion, Arrays, Sorting" >
+         </label>
+
+         <label>
+             Probelm Name:
+             <input type="text" id="problem">
+         </label>
+
+         <label>
+            Difficulty:
+            <select id="difficulty">
+                <option>Easy</option>
+                <option>Medium</option>
+                <option>Hard</option>
+            </select>
+         </label>
+
+
+         <label>
+             Status:
+             <select id="status">
+                  <option>Solved</option>
+                  <option>Unsolved</option>
+             </select>
+         </label>
+
+
+         <button type="submit">Add Entry</button>
+
+       </form>
+      </div>
+
+      <hr>
+
+      <div class="card">
+
+       <label>
+          Filter Status:
+          <select id="filterStatus">
+           <option value="All">All</option>
+           <option value="Solved">Solved</option>
+           <option value="Unsolved">Unsolved</option>
+          </select>
+       </label>
+       
+       <div style="text-align:center; margin-bottom: 15px;">
+       <button id="darkModeToggle">🌙 Dark Mode</button>
+       </div> 
+
+       <div id="stats">
+         <p>Total Problems: <span id="totalCount">0</span>
+         <p>Solved: <span id="solvedCount">0</span>
+         <p>Unsolved: <span id="unsolvedCount">0</span>
+       </div>
+        
+          <p style="text-align:center; font-weight:600; font-size:16px;">
+            🔥 Current Streak: <span id="streakCount">0</span> days
+          </p>
+       <div class="progress-wrapper">
+          <div class="progress-bar" id="progressBar">0%</div>
+       </div>
+
+
+     <div class="card">
+      <table border="1" width="100%">
+          <thead>
+              <tr>
+                  <th>Date</th>
+                  <th>Topic</th>
+                  <th>Problem</th>
+                  <th>Difficulty</th>
+                  <th>Status</th>
+                  <th>Action</th>
+              </tr>
+          </thead>
+          <tbody id="tableBody">
+          </tbody>
+      </table>
+     </div>
+    
+      </div>
+
+     <script src="script.js"></script>
+   </body>
+
+</html>
